@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie Fibonacci</title>
+
+    <link href="Stylesheet.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+
+    <head>
+
+    <h1>Como hacer el ciclo Fibonacci en JavaScript</h1>
+
+    </head>
+
+<br>
+
+<main>
+
+    <article>
+
+<h2>Lo primero que debemos hacer es definir nuestras variables, 3 en este caso</h2>
+
+<br>
+
+<p>let primerNumero = 1;<br> let segundoNumero = 1;<br>let miArray = [primerNumero, segundoNumero];</p>
+<br>
+<br>
+
+<h2>Después definimos un bucle for con los siguientes parámetros</h2>
+<br>
+
+<p>
+for(let i = 0; i <= 50; i++){<br>
+    <br>
+    let nuevoNumero = primerNumero + segundoNumero; <br> miArray.push(nuevoNumero); <br> primerNumero = segundoNumero;
+    <br>segundoNumero = nuevoNumero;<br>
+}</p>
+
+<br>
+<p> Le asigno un argumento de i <= a 50, para no hacerlo muy largo </p>
+<br>
+<br>
+
+<h2>Este código JavaScript ejecutará la serie Fibonacci. Ahora procederemos a imprimirlo</h2>
+<br>
+<p>Lo imprimiremos en forma de pirámide, pues de lo contario haría una línea muy larga con todas estas cifras. De esta 
+    manera también le damos un aspecto más agradable y más fácil de leer. Aquí insertamos un salto /br cada vez que 
+    se cumple la condición del bucle. Para esto tenemos que utilizar el siguiente bucle for</p>
+<br>
+<p>
+for(x of miArray){<br>
+    <br>
+    document.write(x + "&lt br &gt");<br>
+    <br>
+}<br>
+</p>
+
+<br>
+<h2> En esta parte de mi página inserto mi código JavaScript el cual tengo en un archivo separado. </h2>
+
+
+<br>
+
+<div id="piramide">
+<script src="fibonacciindex.js" ></script>
+</div>
+
+<p>Ya está, de esta manera se puede imprimir la secuencia Fibonacci en JavaScript. Ahora fíjate en el código 
+    JavaScript que escribí, y a continuación, le diré con un script incrustado que me imprima mi Array
+</p>
+<br>
+
+    </article>
+
+    <article>
+
+<br>
+
+<h2>Imprimir miArray que guarda la serie Fibonacci </h2>
+<br>
+<br>
+
+    <p>Para imprimir miArray, lo puedo hacer muy fácilmente con el comando document.write </p>
+        lo mostrara sin saltos de linea, por lo que hara una linea muy larga en la pagina al mostrarse
+
+<br>
+<br>
+
+<div>
+    &lt script &gt<br>
+        document.write(miArray);<br>
+    &lt script &gt<br>
+
+</div>
+<br>
+<br>
+    <script>
+        document.write(miArray);
+    </script>
+
+<br>
+<p>Lo imprime tal cual, sin saltos de línea, por lo que se producirá una línea de cifras muy larga</p>
+
+</article>
+
+</main>
+
+</body>
+</html>

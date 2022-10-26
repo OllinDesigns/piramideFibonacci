@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // 1. hacemos una funcion autoinvocada de flecha
+
+let fibonacci = () => {
+    let a = 0;
+    let b = 1;
+    let secuencia = [0];
+    //este ultimo es un array vacio
+
+    // creamos un bucle for
+
+    for (let i = 0; i <= 100; i++){
+        // hasta que i sea igual a 100 se repetira este bucle
+        let c = a;
+
+        a = b;
+        // aqui empieza diciendo que a es igual a 1
+
+        b = a + c;
+        // dice esto que b es igual a 1 + 1???
+
+        secuencia.push(a);
+        /* esto quiere decir que la secuencia va aumentando cada vez que pase por el buble, es decir que 
+        el valor de a va aumentando */
+    }
+
+    document.write(secuencia);
+
+}
+
+fibonacci();
+
+        </script>
+    
+</body>
+</html>
